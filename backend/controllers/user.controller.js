@@ -6,7 +6,7 @@ import cloudinary from "../utils/cloudinary.js";
 
 export const register = async (req, res) => {
     try {
-        const { fullname, email, phoneNumber, password, role } = req.body;
+        const { fullname, email, phoneNumber, password, role } = req.body;//destructuring
          
         if (!fullname || !email || !phoneNumber || !password || !role) {
             return res.status(400).json({
